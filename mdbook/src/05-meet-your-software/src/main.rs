@@ -1,4 +1,3 @@
-#![deny(unsafe_code)]
 #![no_main]
 #![no_std]
 
@@ -12,9 +11,10 @@ use rtt_target::{rtt_init_print, rprintln};
 fn main() -> ! {
     rtt_init_print!();
 
-    // infinite loop; just so we don't leave this stack frame
+    let mut i = 0;
     loop {
-        rprintln!("Hello!");
+        rprintln!("Hello! {}", i);
+        i += 1;
         for _ in 0..100_000{
             asm::nop();
         }

@@ -9,6 +9,9 @@ Before we debug our program let's take a moment to quickly understand what is ac
 here. In the previous chapter we already discussed the purpose of the second chip on the board, as
 well as how it talks to our computer, but how can we actually use it?
 
+
+
+
 The little option `default.gdb.enabled = true` in `Embed.toml` made `cargo embed` open a so-called
 "GDB stub" after flashing. This is a server that our GDB can connect to and send commands like "set
 a breakpoint at address X". The server can then decide on its own how to handle this command. In the
