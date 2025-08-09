@@ -1,15 +1,15 @@
 # Debug it
 
 Let's figure out how to debug our little program. It doesn't really have any interesting bugs yet,
-but that's the best kind of program to learn debugging on.
+but that's the best kind of program to learn debugging on. 
+
+In this section, we will cover two embedded debuggers, RTT (Real Time Transfer) and GDB (GNU Debugger). When debugging embedded devices that is communicating with other devices, using a traditional debugger with breakpoints that halts the CPU can disrupt the timing of the communication and create new issues. 
 
 ## How does this even work?
 
 Before we debug our program let's take a moment to quickly understand what is actually happening
 here. In the previous chapter we already discussed the purpose of the second chip on the board, as
 well as how it talks to our computer, but how can we actually use it?
-
-
 
 
 The little option `default.gdb.enabled = true` in `Embed.toml` made `cargo embed` open a so-called
